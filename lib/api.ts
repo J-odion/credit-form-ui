@@ -1,7 +1,7 @@
 import axios from "axios"
 
 // === CONFIG ===
-const BASE_URL = "http://localhost:5002"
+const BASE_URL = "https://stroom-interest-form.onrender.com"
 
 // === AXIOS CLIENT ===
 export const apiClient = axios.create({
