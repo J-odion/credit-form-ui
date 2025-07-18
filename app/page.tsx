@@ -721,7 +721,7 @@ export default function Component() {
                           <div>
                             <Label htmlFor="estimatedBudget" className="text-sm font-medium flex items-center gap-2">
                               <Calculator className="h-4 w-4" />
-                              Estimated Budget
+                              Current Salary Range
                             </Label>
                             <Input
                               id="estimatedBudget"
