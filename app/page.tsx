@@ -222,7 +222,7 @@ export default function Component() {
             <div className="min-h-screen flex items-center justify-center">
               <div className="text-center space-y-8 max-w-4xl mx-auto">
                 {/* Logo */}
-                <div className="mb-8">
+                <div className="mb-8 flex items-center justify-center">
                   <Image
                     src="/kairos-logo.png"
                     alt="Kairos Hof Energy Ltd"
@@ -294,6 +294,8 @@ export default function Component() {
                     <Play className="mr-3 h-6 w-6" />
                     Start Your Energy Journey
                   </Button>
+
+
                 </div>
 
                 {/* Trust Indicators */}
@@ -312,6 +314,28 @@ export default function Component() {
                       <Clock className="h-4 w-4 text-green-500" />
                       <span className="text-sm">24/7 support</span>
                     </div>
+                  </div>
+                </div>
+                
+                <div className="flex justify-center items-center gap-4 "> 
+                  <h1 className="text-2xl font-bold text-slate-600 leading-tight">
+                    Powered by :
+                  </h1>
+                  <div className="flex justify-center items-center gap-3 ">
+                    <Image
+                    src="creditcorp.png"
+                    alt="Creditcorp"
+                    width={120}
+                    height={100}
+                    className="h-10 md:h-20 w-auto mx-auto"
+                  />
+                  <Image
+                    src="Fidelity_Bank_Plc_Main_Logo.svg"
+                    alt="fidelitybank"
+                    width={100}
+                    height={59}
+                    className="h-10 md:h-8 w-auto mx-auto"
+                  />
                   </div>
                 </div>
               </div>
