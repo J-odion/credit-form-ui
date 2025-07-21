@@ -40,7 +40,6 @@ import {
 } from "lucide-react"
 import { nigerianStates, systemCapacities, occupations, workplaceSectors, paymentPlans } from "@/lib/data"
 
-
 export default function Component() {
   const [currentStep, setCurrentStep] = useState(0) // Start at 0 for introduction
   const [formData, setFormData] = useState({
@@ -55,6 +54,9 @@ export default function Component() {
     otherSector: "",
     estimatedBudget: "",
     paymentPlan: "",
+    salaryRange: "",
+    placeOfEmployment: "",
+    systemPrice: "",
   })
   const [selectedSystem, setSelectedSystem] = useState<any>(null)
   const [isAnimating, setIsAnimating] = useState(false)
@@ -92,6 +94,9 @@ export default function Component() {
     if (formData.systemCapacity) {
       const system = systemCapacities.find((s) => s.value === formData.systemCapacity)
       setSelectedSystem(system)
+      if (system) {
+        setFormData((prev) => ({ ...prev, systemPrice: system.price }))
+      }
     }
   }, [formData.systemCapacity])
 
@@ -144,6 +149,9 @@ export default function Component() {
       otherSector: formData.otherSector?.trim() || undefined,
       estimatedBudget: formData.estimatedBudget?.trim() || undefined,
       paymentPlan: formData.paymentPlan,
+      salaryRange: formData.salaryRange?.trim() || undefined,
+      placeOfEmployment: formData.placeOfEmployment?.trim() || undefined,
+      systemPrice: formData.systemPrice,
     }
 
     // Log the data being sent for debugging
@@ -294,8 +302,6 @@ export default function Component() {
                     <Play className="mr-3 h-6 w-6" />
                     Start Your Energy Journey
                   </Button>
-
-
                 </div>
 
                 {/* Trust Indicators */}
@@ -316,7 +322,7 @@ export default function Component() {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="flex justify-center items-center gap-4 "> 
                   <h1 className="text-2xl font-bold text-slate-600 leading-tight">
                     Powered by :
@@ -743,9 +749,39 @@ export default function Component() {
                           </div>
 
                           <div>
+                            <Label htmlFor="placeOfEmployment" className="text-sm font-medium flex items-center gap-2">
+                              <Briefcase className="h-4 w-4" />
+                              Place of Work
+                            </Label>
+                            <Input
+                              id="placeOfEmployment"
+                              type="text"
+                              placeholder="e.g., Company Name or Organization"
+                              value={formData.placeOfEmployment}
+                              onChange={(e) => handleInputChange("placeOfEmployment", e.target.value)}
+                              className="mt-2 border-2 border-slate-200 focus:border-green-500 transition-all duration-300"
+                            />
+                          </div>
+
+                          <div>
+                            <Label htmlFor="salaryRange" className="text-sm font-medium flex items-center gap-2">
+                              <Calculator className="h-4 w-4" />
+                              Salary Range
+                            </Label>
+                            <Input
+                              id="salaryRange"
+                              type="text"
+                              placeholder="e.g., ₦500,000 - ₦5,000,000"
+                              value={formData.salaryRange}
+                              onChange={(e) => handleInputChange("salaryRange", e.target.value)}
+                              className="mt-2 border-2 border-slate-200 focus:border-green-500"
+                            />
+                          </div>
+
+                          <div>
                             <Label htmlFor="estimatedBudget" className="text-sm font-medium flex items-center gap-2">
                               <Calculator className="h-4 w-4" />
-                              Current Salary Range
+                              Estimated Budget
                             </Label>
                             <Input
                               id="estimatedBudget"
@@ -790,6 +826,14 @@ export default function Component() {
                             <span className="font-medium text-slate-800">{selectedSystem?.label}</span>
                           </div>
                           <div className="flex justify-between">
+                            <span className="text-slate-600">System Price:</span>
+                            <span className="font-medium text-slate-800">{formData.systemPrice}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-slate-600">Estimated Budget:</span>
+                            <span className="font-medium text-slate-800">{formData.estimatedBudget}</span>
+                          </div>
+                          <div className="flex justify-between">
                             <span className="text-slate-600">Payment:</span>
                             <span className="font-medium text-slate-800">{formData.paymentPlan}</span>
                           </div>
@@ -800,6 +844,14 @@ export default function Component() {
                                 ? formData.otherSector || "Other"
                                 : formData.workplaceSector}
                             </span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-slate-600">Place of Work:</span>
+                            <span className="font-medium text-slate-800">{formData.placeOfEmployment || "Not specified"}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-slate-600">Salary Range:</span>
+                            <span className="font-medium text-slate-800">{formData.salaryRange || "Not specified"}</span>
                           </div>
                         </div>
 

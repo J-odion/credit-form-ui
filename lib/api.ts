@@ -65,10 +65,13 @@ export interface FormSubmissionData {
   homeAddress: string
   residenceState: string
   systemCapacity: string
+  systemPrice: string
   occupation?: string
   workplaceSector?: string
   otherSector?: string
   estimatedBudget?: string
+  salaryRange?: string
+  placeOfEmployment?: string
   paymentPlan: string
 }
 
