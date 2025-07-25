@@ -69,10 +69,10 @@ export interface FormSubmissionData {
   occupation?: string
   workplaceSector?: string
   otherSector?: string
-  estimatedBudget?: string
   salaryRange?: string
   placeOfEmployment?: string
   paymentPlan: string
+  provider?: string
 }
 
 export interface ApiResponse<T = any> {

@@ -57,7 +57,7 @@ export default function Component() {
     salaryRange: "",
     placeOfEmployment: "",
     systemPrice: "",
-    provider: "creme",
+    provider: "kairos",
   })
   const [selectedSystem, setSelectedSystem] = useState<any>(null)
   const [isAnimating, setIsAnimating] = useState(false)
@@ -148,11 +148,11 @@ export default function Component() {
       occupation: formData.occupation || undefined,
       workplaceSector: formData.workplaceSector || undefined,
       otherSector: formData.otherSector?.trim() || undefined,
-      estimatedBudget: formData.estimatedBudget?.trim() || undefined,
       paymentPlan: formData.paymentPlan,
       salaryRange: formData.salaryRange?.trim() || undefined,
       placeOfEmployment: formData.placeOfEmployment?.trim() || undefined,
       systemPrice: formData.systemPrice,
+      provider: "kairosenergy",
     }
 
     // Log the data being sent for debugging
