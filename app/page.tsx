@@ -256,7 +256,7 @@ export default function Component() {
                 </div>
 
                 {/* Features Grid */}
-                <div className="grid md:grid-cols-3 gap-6 my-12">
+                <div className="p-2 grid md:grid-cols-3 gap-6 my-12">
                   <Card className="bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300">
                     <CardContent className="p-6 text-center">
                       <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
