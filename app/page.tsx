@@ -229,7 +229,7 @@ export default function Component() {
         <div className="max-w-6xl mx-auto">
           {/* Introduction Step */}
           {currentStep === 0 && (
-            <div className="min-h-screen bg-[#eaf7eb] z-50  flex items-center justify-center">
+            <div className="min-h-screen bg-[#eaf7eb] py-4 z-50  flex items-center justify-center">
               <div className="text-center space-y-8 max-w-4xl mx-auto">
                 {/* Logo */}
                 <div className="mb-8 flex items-center justify-center">
@@ -256,7 +256,7 @@ export default function Component() {
                 </div>
 
                 {/* Features Grid */}
-                <div className="p-2 grid md:grid-cols-3 gap-6 my-12">
+                <div className="p-8 md:p-2 grid md:grid-cols-3 gap-6 my-12">
                   <Card className="bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300">
                     <CardContent className="p-6 text-center">
                       <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -290,15 +290,15 @@ export default function Component() {
 
                 {/* CTA Section */}
                 <div className="space-y-6">
-                  <div className="flex items-center justify-center gap-2 text-slate-600">
-                    <Sparkles className="h-5 w-5 text-green-500" />
+                  <div className="flex items-center justify-center gap-2 text-slate-600 text-xs md:text-md">
+                    <Sparkles className="h-5 w-5 text-green-500 " />
                     <span>Get your personalized energy solution in 4 simple steps</span>
                     <Sparkles className="h-5 w-5 text-green-500" />
                   </div>
                   <Button
                     onClick={handleStart}
                     size="lg"
-                    className="bg-gradient-to-r from-slate-800 to-green-500 hover:from-slate-900 hover:to-green-600 text-white font-semibold px-12 py-4 text-lg rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl"
+                    className="bg-gradient-to-r from-slate-800 to-green-500 hover:from-slate-900 hover:to-green-600 text-white font-semibold md:px-12 py-4 md:text-lg rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl"
                   >
                     <Play className="mr-3 h-6 w-6" />
                     Start Your Energy Journey
@@ -308,18 +308,18 @@ export default function Component() {
                 {/* Trust Indicators */}
                 <div className="pt-8 border-t border-slate-200">
                   <p className="text-sm text-slate-600 mb-4">Trusted by over 10,000+ Nigerian homes and businesses</p>
-                  <div className="flex justify-center items-center gap-8 text-slate-400">
-                    <div className="flex items-center gap-2">
+                  <div className="flex justify-center items-center gap-2 md:gap-8 text-slate-400">
+                    <div className="flex items-center gap-1 md:gap-2">
                       <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-sm text-slate-600">No spam, ever</span>
+                      <span className="text-xs md:text-sm text-slate-600">No spam, ever</span>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-1 md:gap-2">
                       <Shield className="h-4 w-4 text-green-500" />
-                      <span className="text-sm text-slate-600">Secure & private</span>
+                      <span className="text-xs md:text-sm text-slate-600">Secure & private</span>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-1 md:gap-2">
                       <Clock className="h-4 w-4 text-green-500" />
-                      <span className="text-sm text-slate-600">24/7 support</span>
+                      <span className="text-xs md:text-sm text-slate-600">24/7 support</span>
                     </div>
                   </div>
                 </div>

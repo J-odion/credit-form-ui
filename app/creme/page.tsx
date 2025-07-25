@@ -262,7 +262,7 @@ export default function Component() {
                     <span className="text-white block">Clean Energy</span>
                   </h1>
 
-                  <p className="text-xl md:text-2xl text-black max-w-3xl mx-auto leading-relaxed">
+                  <p className="text-sm md:text-2xl text-black max-w-3xl mx-auto leading-relaxed">
                     Join thousands of Nigerians who have made the switch to reliable, sustainable solar energy. Get a
                     personalized renewable energy solution tailored to your needs.
                   </p>
@@ -312,7 +312,7 @@ export default function Component() {
                   <Button
                     onClick={handleStart}
                     size="lg"
-                    className="bg-gradient-to-r from-[#2b200c] to-[#f3b211] hover:from-slate-900 hover:to-[#f3b211] text-white font-semibold px-12 py-4 text-lg rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl"
+                    className="bg-gradient-to-r from-[#2b200c] to-[#f3b211] hover:from-slate-900 hover:to-[#f3b211] text-white font-semibold md:px-12 py-4 md:text-lg rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl"
                   >
                     <Play className="mr-3 h-6 w-6" />
                     Start Your Energy Journey
@@ -322,7 +322,7 @@ export default function Component() {
                 {/* Trust Indicators */}
                 <div className="pt-8 border-t border-slate-200">
                   <p className="text-sm text-black mb-4">Trusted by over 10,000+ Nigerian homes and businesses</p>
-                  <div className="flex justify-center items-center gap-4 md:gap-8 text-black">
+                  <div className="flex justify-center items-center gap-2 md:gap-8 text-black">
                     <div className="flex items-center gap-1 md:gap-2">
                       <CheckCircle className="h-4 w-4 text-white" />
                       <span className="text-xs md:text-sm">No spam, ever</span>
