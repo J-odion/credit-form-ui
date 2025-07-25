@@ -354,11 +354,11 @@ export default function Component() {
             <>
               {/* Step Indicator */}
               <div className="flex justify-center mb-8">
-                <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-2 md:space-x-4">
                   {[1, 2, 3, 4].map((step) => (
                     <div key={step} className="flex items-center">
                       <div
-                        className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold transition-all duration-300 ${step <= currentStep
+                        className={`w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center font-semibold transition-all duration-300 ${step <= currentStep
                             ? "bg-gradient-to-r from-slate-800 to-green-500 text-white shadow-lg"
                             : "bg-slate-200 text-slate-500"
                           }`}
@@ -367,7 +367,7 @@ export default function Component() {
                       </div>
                       {step < 4 && (
                         <div
-                          className={`w-16 h-1 mx-2 transition-all duration-300 ${step < currentStep ? "bg-gradient-to-r from-slate-800 to-green-500" : "bg-slate-200"
+                          className={`w-6 md:w-16 h-1 mx-2 transition-all duration-300 ${step < currentStep ? "bg-gradient-to-r from-slate-800 to-green-500" : "bg-slate-200"
                             }`}
                         />
                       )}
@@ -580,8 +580,8 @@ export default function Component() {
                 {currentStep === 3 && (
                   <div className="space-y-8">
                     <div className="text-center">
-                      <h2 className="text-3xl font-bold mb-4 text-slate-800">Choose Your Perfect System</h2>
-                      <p className="text-slate-600">Select the system capacity that best fits your energy needs</p>
+                      <h2 className="text-3xl font-bold mb-4 text-white">Choose Your Perfect System</h2>
+                      <p className="text-white">Select the system capacity that best fits your energy needs</p>
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -911,11 +911,11 @@ export default function Component() {
 
                 {/* Success Message */}
                 <div className="space-y-4">
-                  <h1 className="text-4xl md:text-5xl font-bold text-slate-800">Thank You!</h1>
+                  <h1 className="text-4xl md:text-5xl font-bold text-white">Thank You!</h1>
                   <p className="text-xl text-green-600 font-semibold">
                     Your interest form has been successfully submitted
                   </p>
-                  <p className="text-lg text-slate-600 max-w-xl mx-auto">
+                  <p className="text-lg text-white max-w-xl mx-auto">
                     Our energy experts will review your requirements and contact you within 24 hours to discuss your
                     personalized solar solution.
                   </p>
@@ -949,8 +949,8 @@ export default function Component() {
                           <div className="flex-1">
                             <div className="flex justify-between items-start">
                               <div>
-                                <h4 className="font-medium text-slate-800">{item.title}</h4>
-                                <p className="text-sm text-slate-600">{item.desc}</p>
+                                <h4 className="font-medium text-slate-200">{item.title}</h4>
+                                <p className="text-sm text-slate-300">{item.desc}</p>
                               </div>
                               <Badge variant="outline" className="text-xs">
                                 {item.time}

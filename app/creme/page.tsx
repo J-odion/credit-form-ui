@@ -211,8 +211,8 @@ export default function Component() {
                 height={119}
                 className="h-8 w-auto"
               />
-              <div className="flex items-center gap-4">
-                <div className="hidden md:flex items-center gap-2 text-sm text-slate-600">
+              <div className=" hidden md:flex items-center gap-4">
+                <div className=" items-center gap-2 text-sm text-slate-600">
                   <span>
                     Step {currentStep} of {totalSteps}
                   </span>
@@ -220,7 +220,7 @@ export default function Component() {
                 <div className="w-32">
                   <Progress value={progress} className="h-2 bg-slate-200">
                     <div
-                      className="h-full bg-gradient-to-r from-[#221909] to-[#f59e0c] transition-all duration-300 rounded-full"
+                      className="h-full  bg-gradient-to-r from-[#221909] to-[#f59e0c] transition-all duration-300 rounded-full"
                       style={{ width: `${progress}%` }}
                     />
                   </Progress>
@@ -238,13 +238,13 @@ export default function Component() {
             <div className="min-h-screen flex items-center justify-center">
               <div className="text-center space-y-8 max-w-4xl mx-auto">
                 {/* Logo */}
-                <div className="mb-8 w-1/2 mx-auto flex items-center align-middle justify-center">
+                <div className="mb-8 w-1/2 mx-auto flex  gap-2 items-center align-middle justify-center">
                   <Image
                     src="/kairos-logo.png"
                     alt="Kairos Hof Energy Ltd"
                     width={400}
                     height={159}
-                    className="h10 md:h-20 w-auto mx-auto"
+                    className="h-auto w-24 md:h-20 md:w-auto mx-auto"
                   />
                   <Image
                     src="/creme-logo.png"
@@ -322,18 +322,18 @@ export default function Component() {
                 {/* Trust Indicators */}
                 <div className="pt-8 border-t border-slate-200">
                   <p className="text-sm text-black mb-4">Trusted by over 10,000+ Nigerian homes and businesses</p>
-                  <div className="flex justify-center items-center gap-8 text-black">
-                    <div className="flex items-center gap-2">
+                  <div className="flex justify-center items-center gap-4 md:gap-8 text-black">
+                    <div className="flex items-center gap-1 md:gap-2">
                       <CheckCircle className="h-4 w-4 text-white" />
-                      <span className="text-sm">No spam, ever</span>
+                      <span className="text-xs md:text-sm">No spam, ever</span>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-1 md:gap-2">
                       <Shield className="h-4 w-4 text-white" />
-                      <span className="text-sm">Secure & private</span>
+                      <span className="text-xs md:text-sm">Secure & private</span>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-1 md:gap-2">
                       <Clock className="h-4 w-4 text-white" />
-                      <span className="text-sm">24/7 support</span>
+                      <span className="text-xs md:text-sm">24/7 support</span>
                     </div>
                   </div>
                 </div>
@@ -367,12 +367,12 @@ export default function Component() {
           {currentStep > 0 && currentStep < 5 && (
             <>
               {/* Step Indicator */}
-              <div className="flex justify-center mb-8">
-                <div className="flex items-center space-x-4">
+              <div className="flex justify-center  mb-8">
+                <div className="flex items-center space-x-2 md:space-x-4">
                   {[1, 2, 3, 4].map((step) => (
                     <div key={step} className="flex items-center">
                       <div
-                        className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold transition-all duration-300 ${step <= currentStep
+                        className={`w-8 h-8 md:w-10 md:h-10 rounded-full text-xs flex items-center justify-center font-semibold transition-all duration-300 ${step <= currentStep
                             ? "bg-gradient-to-r from-[#2b200c] to-[#291e0c] text-white shadow-lg"
                             : "bg-slate-200 text-slate-500"
                           }`}
@@ -381,7 +381,7 @@ export default function Component() {
                       </div>
                       {step < 4 && (
                         <div
-                          className={`w-16 h-1 mx-2 transition-all duration-300 ${step < currentStep ? "bg-gradient-to-r from-[#2b200c] to-[#291e0c]" : "bg-slate-200"
+                          className={`w-6 md:w-16 h-1 mx-2 transition-all duration-300 ${step < currentStep ? "bg-gradient-to-r from-[#2b200c] to-[#291e0c]" : "bg-slate-200"
                             }`}
                         />
                       )}
@@ -606,7 +606,7 @@ export default function Component() {
                           <Card
                             key={system.value}
                             className={`cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-xl bg-white/95 backdrop-blur-sm ${isSelected
-                                ? "ring-4 ring-[#f59e0c] shadow-2xl bg-gradient-to-br from-yellow-50 to-slate-50"
+                                ? "ring-4 ring-[#2b200c] shadow-2xl bg-gradient-to-br from-yellow-50 to-slate-50"
                                 : "hover:shadow-lg"
                               }`}
                             onClick={() => handleInputChange("systemCapacity", system.value)}
