@@ -57,7 +57,7 @@ export default function Component() {
     salaryRange: "",
     placeOfEmployment: "",
     systemPrice: "",
-    provider: "creme",
+    provider: "kairosenergy",
   })
   const [selectedSystem, setSelectedSystem] = useState<any>(null)
   const [isAnimating, setIsAnimating] = useState(false)
@@ -178,24 +178,23 @@ export default function Component() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br w-full bg-slate-900 relative">
+    <div className="min-h-screen bg-gradient-to-br from-[#f3b211] via-[#f3b211] to-[#f3b211] relative">
       {/* Background Device Image */}
-      <div className="fixed w-full h-screen ">
+      <div className="fixed  ">
         <div className="relative  w-full h-full">
           <Image
-            src="/Newbg.png"
-            alt="Stroom Device"
+            src="/hero-bg.png"
+            alt="creme dbanj"
             width={600}
             height={800}
-            objectPosition="cover"
-            className="w-full h-screen "
+            className="w-full h-screen object-cover"
           />
         </div>
       </div>
 
       {/* Header - Only show during form steps */}
       {currentStep > 0 && currentStep < 5 && (
-        <div className="bg-white shadow-lg border-b top-0 z-50 relative">
+        <div className="bg-[#efe1c0] shadow-lg border-b top-0 z-50 relative">
           <div className="container mx-auto px-4 py-4">
             <div className="flex items-center justify-between">
               <Image
@@ -204,6 +203,13 @@ export default function Component() {
                 width={300}
                 height={119}
                 className="h-12 w-auto"
+              />
+              <Image
+                src="/creme-logo.png"
+                alt="Kairos Hof Energy Ltd"
+                width={200}
+                height={119}
+                className="h-8 w-auto"
               />
               <div className="flex items-center gap-4">
                 <div className="hidden md:flex items-center gap-2 text-sm text-slate-600">
@@ -214,7 +220,7 @@ export default function Component() {
                 <div className="w-32">
                   <Progress value={progress} className="h-2 bg-slate-200">
                     <div
-                      className="h-full bg-gradient-to-r from-slate-800 to-green-500 transition-all duration-300 rounded-full"
+                      className="h-full bg-gradient-to-r from-[#221909] to-[#f59e0c] transition-all duration-300 rounded-full"
                       style={{ width: `${progress}%` }}
                     />
                   </Progress>
@@ -229,16 +235,23 @@ export default function Component() {
         <div className="max-w-6xl mx-auto">
           {/* Introduction Step */}
           {currentStep === 0 && (
-            <div className="min-h-screen bg-[#eaf7eb] z-50  flex items-center justify-center">
+            <div className="min-h-screen flex items-center justify-center">
               <div className="text-center space-y-8 max-w-4xl mx-auto">
                 {/* Logo */}
-                <div className="mb-8 flex items-center justify-center">
+                <div className="mb-8 w-1/2 mx-auto flex items-center align-middle justify-center">
                   <Image
                     src="/kairos-logo.png"
                     alt="Kairos Hof Energy Ltd"
                     width={400}
                     height={159}
-                    className="h-20 w-auto mx-auto"
+                    className="h10 md:h-20 w-auto mx-auto"
+                  />
+                  <Image
+                    src="/creme-logo.png"
+                    alt="Kairos Hof Energy Ltd"
+                    width={200}
+                    height={119}
+                    className=" h-6 md:h-8 w-auto"
                   />
                 </div>
 
@@ -246,10 +259,10 @@ export default function Component() {
                 <div className="space-y-6">
                   <h1 className="text-4xl md:text-6xl font-bold text-black leading-tight">
                     Power Your Future with
-                    <span className="text-green-500 block">Clean Energy</span>
+                    <span className="text-white block">Clean Energy</span>
                   </h1>
 
-                  <p className="text-sm md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+                  <p className="text-xl md:text-2xl text-black max-w-3xl mx-auto leading-relaxed">
                     Join thousands of Nigerians who have made the switch to reliable, sustainable solar energy. Get a
                     personalized renewable energy solution tailored to your needs.
                   </p>
@@ -259,30 +272,30 @@ export default function Component() {
                 <div className="grid md:grid-cols-3 gap-6 my-12">
                   <Card className="bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300">
                     <CardContent className="p-6 text-center">
-                      <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Clock className="h-8 w-8 text-slate-600" />
+                      <div className="w-16 h-16 bg-gradient-to-r from-[#f3b211] to-[#f5b000] rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Clock className="h-8 w-8 text-white" />
                       </div>
-                      <h3 className="text-lg font-semibold text-slate-800 mb-2">Quick & Easy</h3>
+                      <h3 className="text-lg font-semibold text-black mb-2">Quick & Easy</h3>
                       <p className="text-slate-600">Complete in just 5 minutes</p>
                     </CardContent>
                   </Card>
 
                   <Card className="bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300">
                     <CardContent className="p-6 text-center">
-                      <div className="w-16 h-16 bg-gradient-to-r from-slate-700 to-slate-800 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <div className="w-16 h-16 bg-gradient-to-r from-slate-700 to-[#2b200c] rounded-full flex items-center justify-center mx-auto mb-4">
                         <Shield className="h-8 w-8 text-white" />
                       </div>
-                      <h3 className="text-lg font-semibold text-slate-800 mb-2">Expert Consultation</h3>
+                      <h3 className="text-lg font-semibold text-[#2b200c] mb-2">Expert Consultation</h3>
                       <p className="text-slate-600">Free professional assessment</p>
                     </CardContent>
                   </Card>
 
                   <Card className="bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300">
                     <CardContent className="p-6 text-center">
-                      <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <div className="w-16 h-16 bg-gradient-to-r from-[#f3b211] to-[#f5b000] rounded-full flex items-center justify-center mx-auto mb-4">
                         <Award className="h-8 w-8 text-white" />
                       </div>
-                      <h3 className="text-lg font-semibold text-slate-600 mb-2">Trusted Brand</h3>
+                      <h3 className="text-lg font-semibold text-[#2b200c] mb-2">Trusted Brand</h3>
                       <p className="text-slate-600">Nigeria's leading solar provider</p>
                     </CardContent>
                   </Card>
@@ -290,15 +303,16 @@ export default function Component() {
 
                 {/* CTA Section */}
                 <div className="space-y-6">
-                  <div className="flex items-center justify-center gap-2 text-slate-600">
-                    <Sparkles className="h-5 w-5 text-green-500" />
+                  <div className="flex items-center justify-center gap-2 text-black">
+                    <Sparkles className="h-5 w-5 text-[#f3b211]" />
                     <span>Get your personalized energy solution in 4 simple steps</span>
-                    <Sparkles className="h-5 w-5 text-green-500" />
+                    <Sparkles className="h-5 w-5 text-[#f3b211]" />
                   </div>
+
                   <Button
                     onClick={handleStart}
                     size="lg"
-                    className="bg-gradient-to-r from-slate-800 to-green-500 hover:from-slate-900 hover:to-green-600 text-white font-semibold px-12 py-4 text-lg rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl"
+                    className="bg-gradient-to-r from-[#2b200c] to-[#f3b211] hover:from-slate-900 hover:to-[#f3b211] text-white font-semibold px-12 py-4 text-lg rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl"
                   >
                     <Play className="mr-3 h-6 w-6" />
                     Start Your Energy Journey
@@ -307,25 +321,25 @@ export default function Component() {
 
                 {/* Trust Indicators */}
                 <div className="pt-8 border-t border-slate-200">
-                  <p className="text-sm text-slate-600 mb-4">Trusted by over 10,000+ Nigerian homes and businesses</p>
-                  <div className="flex justify-center items-center gap-8 text-slate-400">
+                  <p className="text-sm text-black mb-4">Trusted by over 10,000+ Nigerian homes and businesses</p>
+                  <div className="flex justify-center items-center gap-8 text-black">
                     <div className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-sm text-slate-600">No spam, ever</span>
+                      <CheckCircle className="h-4 w-4 text-white" />
+                      <span className="text-sm">No spam, ever</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Shield className="h-4 w-4 text-green-500" />
-                      <span className="text-sm text-slate-600">Secure & private</span>
+                      <Shield className="h-4 w-4 text-white" />
+                      <span className="text-sm">Secure & private</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Clock className="h-4 w-4 text-green-500" />
-                      <span className="text-sm text-slate-600">24/7 support</span>
+                      <Clock className="h-4 w-4 text-white" />
+                      <span className="text-sm">24/7 support</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex justify-center items-center gap-4 ">
-                  <h1 className="text-xl mb:text-2xl font-bold text-black leading-tight">
+                  <h1 className=" text-xl mb:text-2xl font-bold text-black leading-tight">
                     Powered by :
                   </h1>
                   <div className="flex justify-center items-center gap-3 ">
@@ -359,7 +373,7 @@ export default function Component() {
                     <div key={step} className="flex items-center">
                       <div
                         className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold transition-all duration-300 ${step <= currentStep
-                            ? "bg-gradient-to-r from-slate-800 to-green-500 text-white shadow-lg"
+                            ? "bg-gradient-to-r from-[#2b200c] to-[#291e0c] text-white shadow-lg"
                             : "bg-slate-200 text-slate-500"
                           }`}
                       >
@@ -367,7 +381,7 @@ export default function Component() {
                       </div>
                       {step < 4 && (
                         <div
-                          className={`w-16 h-1 mx-2 transition-all duration-300 ${step < currentStep ? "bg-gradient-to-r from-slate-800 to-green-500" : "bg-slate-200"
+                          className={`w-16 h-1 mx-2 transition-all duration-300 ${step < currentStep ? "bg-gradient-to-r from-[#2b200c] to-[#291e0c]" : "bg-slate-200"
                             }`}
                         />
                       )}
@@ -397,7 +411,7 @@ export default function Component() {
                 {currentStep === 1 && (
                   <div className="grid lg:grid-cols-2 gap-8">
                     <Card className="shadow-2xl border-0 overflow-hidden bg-white/95 backdrop-blur-sm">
-                      <CardHeader className="bg-gradient-to-r from-slate-800 to-slate-700 text-white">
+                      <CardHeader className="bg-gradient-to-r from-[#2b200c] to-slate-700 text-white">
                         <CardTitle className="flex items-center gap-2 text-2xl">
                           <User className="h-6 w-6" />
                           Tell Us About Yourself
@@ -419,7 +433,7 @@ export default function Component() {
                               placeholder="Enter your full name"
                               value={formData.fullName}
                               onChange={(e) => handleInputChange("fullName", e.target.value)}
-                              className="mt-2 border-2 border-slate-200 focus:border-green-500 focus:ring-green-500 transition-all duration-300"
+                              className="mt-2 border-2 border-slate-200 focus:border-[#f59e0c] focus:ring-[#f59e0c] transition-all duration-300"
                             />
                           </div>
 
@@ -434,7 +448,7 @@ export default function Component() {
                               placeholder="your.email@example.com"
                               value={formData.email}
                               onChange={(e) => handleInputChange("email", e.target.value)}
-                              className="mt-2 border-2 border-slate-200 focus:border-green-500 focus:ring-green-500 transition-all duration-300"
+                              className="mt-2 border-2 border-slate-200 focus:border-[#f59e0c] focus:ring-[#f59e0c] transition-all duration-300"
                             />
                           </div>
 
@@ -449,7 +463,7 @@ export default function Component() {
                               placeholder="+234 xxx xxx xxxx"
                               value={formData.phoneNumber}
                               onChange={(e) => handleInputChange("phoneNumber", e.target.value)}
-                              className="mt-2 border-2 border-slate-200 focus:border-green-500 focus:ring-green-500 transition-all duration-300"
+                              className="mt-2 border-2 border-slate-200 focus:border-[#f59e0c] focus:ring-[#f59e0c] transition-all duration-300"
                             />
                           </div>
                         </div>
@@ -460,25 +474,25 @@ export default function Component() {
                       <Card className="shadow-xl border-0 bg-white/95 backdrop-blur-sm">
                         <CardContent className="p-6">
                           <div className="text-center space-y-4">
-                            <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto">
+                            <div className="w-20 h-20 bg-gradient-to-r from-[#f59e0c] to-[#f59e0c] rounded-full flex items-center justify-center mx-auto">
                               <Lightbulb className="h-10 w-10 text-white" />
                             </div>
-                            <h3 className="text-xl font-semibold text-slate-800">Why Choose Solar?</h3>
+                            <h3 className="text-xl font-semibold text-[#2b200c]">Why Choose Solar?</h3>
                             <div className="grid grid-cols-2 gap-4 text-sm">
-                              <div className="text-center p-3 bg-green-50 rounded-lg border border-green-100">
-                                <Sun className="h-6 w-6 text-green-600 mx-auto mb-2" />
+                              <div className="text-center p-3 bg-yellow-50 rounded-lg border border-yellow-400">
+                                <Sun className="h-6 w-6 text-[#825b18] mx-auto mb-2" />
                                 <p className="font-medium text-slate-700">Clean Energy</p>
                               </div>
-                              <div className="text-center p-3 bg-slate-50 rounded-lg border border-slate-100">
+                              <div className="text-center p-3 bg-yellow-100 rounded-lg border border-yellow-100">
                                 <Calculator className="h-6 w-6 text-slate-600 mx-auto mb-2" />
                                 <p className="font-medium text-slate-700">Cost Savings</p>
                               </div>
-                              <div className="text-center p-3 bg-slate-50 rounded-lg border border-slate-100">
+                              <div className="text-center p-3 bg-yellow-100 rounded-lg border border-yellow-100">
                                 <Shield className="h-6 w-6 text-slate-600 mx-auto mb-2" />
                                 <p className="font-medium text-slate-700">Reliable Power</p>
                               </div>
-                              <div className="text-center p-3 bg-green-50 rounded-lg border border-green-100">
-                                <Leaf className="h-6 w-6 text-green-600 mx-auto mb-2" />
+                              <div className="text-center p-3 bg-yellow-50 rounded-lg border border-yellow-400">
+                                <Leaf className="h-6 w-6 text-[#221a0b] mx-auto mb-2" />
                                 <p className="font-medium text-slate-700">Eco-Friendly</p>
                               </div>
                             </div>
@@ -493,12 +507,12 @@ export default function Component() {
                 {currentStep === 2 && (
                   <div className="grid lg:grid-cols-2 gap-8">
                     <Card className="shadow-2xl border-0 overflow-hidden bg-white/95 backdrop-blur-sm">
-                      <CardHeader className="bg-gradient-to-r from-green-600 to-green-500 text-white">
+                      <CardHeader className="bg-gradient-to-r from-[#f59e0c] to-[#f59e0c] text-white">
                         <CardTitle className="flex items-center gap-2 text-2xl">
                           <MapPin className="h-6 w-6" />
                           Your Location
                         </CardTitle>
-                        <CardDescription className="text-green-100">
+                        <CardDescription className="text-yellow-100">
                           Help us understand your location for better service
                         </CardDescription>
                       </CardHeader>
@@ -513,7 +527,7 @@ export default function Component() {
                               value={formData.residenceState}
                               onValueChange={(value) => handleInputChange("residenceState", value)}
                             >
-                              <SelectTrigger className="mt-2 border-2 border-slate-200 focus:border-green-500 focus:ring-green-500 transition-all duration-300">
+                              <SelectTrigger className="mt-2 border-2 border-slate-200 focus:border-[#f59e0c] focus:ring-[#f59e0c] transition-all duration-300">
                                 <SelectValue placeholder="Select your state" />
                               </SelectTrigger>
                               <SelectContent className="max-h-60">
@@ -536,7 +550,7 @@ export default function Component() {
                               placeholder="Enter your complete home address"
                               value={formData.homeAddress}
                               onChange={(e) => handleInputChange("homeAddress", e.target.value)}
-                              className="mt-2 border-2 border-slate-200 focus:border-green-500 focus:ring-green-500 min-h-[120px] transition-all duration-300"
+                              className="mt-2 border-2 border-slate-200 focus:border-[#f59e0c] focus:ring-[#f59e0c] min-h-[120px] transition-all duration-300"
                             />
                           </div>
                         </div>
@@ -546,7 +560,7 @@ export default function Component() {
                     <div className="hidden md:block space-y-6">
                       <Card className="shadow-xl border-0 bg-white/95 backdrop-blur-sm">
                         <CardContent className="p-6">
-                          <h3 className="text-xl font-semibold mb-4 text-center text-slate-800">
+                          <h3 className="text-xl font-semibold mb-4 text-center text-[#2b200c]">
                             Installation Process
                           </h3>
                           <div className="space-y-4">
@@ -560,11 +574,11 @@ export default function Component() {
                                 key={item.step}
                                 className="flex items-start gap-3 p-3 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors"
                               >
-                                <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                <div className="w-8 h-8 bg-gradient-to-r from-[#f59e0c] to-[#f59e0c] rounded-full flex items-center justify-center flex-shrink-0">
                                   <span className="text-white font-semibold text-sm">{item.step}</span>
                                 </div>
                                 <div>
-                                  <h4 className="font-medium text-slate-800">{item.title}</h4>
+                                  <h4 className="font-medium text-[#2b200c]">{item.title}</h4>
                                   <p className="text-sm text-slate-600">{item.desc}</p>
                                 </div>
                               </div>
@@ -580,7 +594,7 @@ export default function Component() {
                 {currentStep === 3 && (
                   <div className="space-y-8">
                     <div className="text-center">
-                      <h2 className="text-3xl font-bold mb-4 text-slate-800">Choose Your Perfect System</h2>
+                      <h2 className="text-3xl font-bold mb-4 text-[#2b200c]">Choose Your Perfect System</h2>
                       <p className="text-slate-600">Select the system capacity that best fits your energy needs</p>
                     </div>
 
@@ -592,7 +606,7 @@ export default function Component() {
                           <Card
                             key={system.value}
                             className={`cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-xl bg-white/95 backdrop-blur-sm ${isSelected
-                                ? "ring-4 ring-green-500 shadow-2xl bg-gradient-to-br from-green-50 to-slate-50"
+                                ? "ring-4 ring-[#f59e0c] shadow-2xl bg-gradient-to-br from-yellow-50 to-slate-50"
                                 : "hover:shadow-lg"
                               }`}
                             onClick={() => handleInputChange("systemCapacity", system.value)}
@@ -600,15 +614,15 @@ export default function Component() {
                             <CardHeader className="text-center">
                               <div
                                 className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-3 ${isSelected
-                                    ? "bg-gradient-to-r from-slate-800 to-green-500"
-                                    : "bg-gradient-to-r from-slate-400 to-slate-500"
+                                    ? "bg-gradient-to-r from-[#2b200c] to-[#f59e0c]"
+                                    : "bg-gradient-to-r from-yellow-400 to-yellow-500"
                                   }`}
                               >
                                 <Icon className="h-8 w-8 text-white" />
                               </div>
-                              <CardTitle className="text-lg text-slate-800">{system.label}</CardTitle>
+                              <CardTitle className="text-lg text-[#2b200c]">{system.label}</CardTitle>
                               <CardDescription className="text-slate-600">{system.description}</CardDescription>
-                              <Badge variant="secondary" className="mt-2 bg-green-100 text-green-800">
+                              <Badge variant="secondary" className="mt-2 bg-yellow-100 text-yellow-800">
                                 {system.price}
                               </Badge>
                             </CardHeader>
@@ -616,7 +630,7 @@ export default function Component() {
                               <ul className="space-y-2 text-sm">
                                 {system.features.map((feature, index) => (
                                   <li key={index} className="flex items-center gap-2">
-                                    <CheckCircle className="h-4 w-4 text-green-500" />
+                                    <CheckCircle className="h-4 w-4 text-[#f59e0c]" />
                                     <span className="text-slate-700">{feature}</span>
                                   </li>
                                 ))}
@@ -628,23 +642,23 @@ export default function Component() {
                     </div>
 
                     {selectedSystem && (
-                      <Card className="shadow-xl border-0 bg-gradient-to-r from-green-50 to-slate-50 bg-white/95 backdrop-blur-sm">
+                      <Card className="shadow-xl border-0 bg-gradient-to-r from-yellow-50 to-slate-50 bg-white/95 backdrop-blur-sm">
                         <CardContent className="p-6">
                           <div className="grid md:grid-cols-2 gap-6">
                             <div>
-                              <h3 className="text-xl font-semibold mb-4 text-slate-800">Payment Options</h3>
+                              <h3 className="text-xl font-semibold mb-4 text-[#2b200c]">Payment Options</h3>
                               <div className="space-y-3">
                                 {paymentPlans.map((plan) => (
                                   <div
                                     key={plan.value}
                                     className={`p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 ${formData.paymentPlan === plan.value
-                                        ? "border-green-500 bg-green-50"
+                                        ? "border-[#f59e0c] bg-yellow-50"
                                         : "border-slate-200 hover:border-slate-300 bg-white"
                                       }`}
                                     onClick={() => handleInputChange("paymentPlan", plan.value)}
                                   >
                                     <div className="flex justify-between items-center">
-                                      <span className="font-medium text-slate-800">{plan.label}</span>
+                                      <span className="font-medium text-[#2b200c]">{plan.label}</span>
                                     </div>
                                   </div>
                                 ))}
@@ -652,14 +666,14 @@ export default function Component() {
                             </div>
 
                             <div>
-                              <h3 className="text-xl font-semibold mb-4 text-slate-800">System Details</h3>
+                              <h3 className="text-xl font-semibold mb-4 text-[#2b200c]">System Details</h3>
                               <div className="bg-white p-4 rounded-lg border border-slate-200">
                                 <div className="flex items-center gap-3 mb-3">
-                                  <selectedSystem.icon className="h-6 w-6 text-green-500" />
-                                  <span className="font-medium text-slate-800">{selectedSystem.label}</span>
+                                  <selectedSystem.icon className="h-6 w-6 text-[#f59e0c]" />
+                                  <span className="font-medium text-[#2b200c]">{selectedSystem.label}</span>
                                 </div>
                                 <p className="text-slate-600 mb-3">{selectedSystem.description}</p>
-                                <div className="text-lg font-semibold text-green-600">{selectedSystem.price}</div>
+                                <div className="text-lg font-semibold text-[#f59e0c]">{selectedSystem.price}</div>
                               </div>
                             </div>
                           </div>
@@ -673,7 +687,7 @@ export default function Component() {
                 {currentStep === 4 && (
                   <div className="grid lg:grid-cols-2 gap-8">
                     <Card className="shadow-2xl border-0 overflow-hidden bg-white/95 backdrop-blur-sm">
-                      <CardHeader className="bg-gradient-to-r from-slate-700 to-slate-800 text-white">
+                      <CardHeader className="bg-gradient-to-r from-slate-700 to-[#2b200c] text-white">
                         <CardTitle className="flex items-center gap-2 text-2xl">
                           <Briefcase className="h-6 w-6" />
                           Professional Information
@@ -693,7 +707,7 @@ export default function Component() {
                               value={formData.occupation}
                               onValueChange={(value) => handleInputChange("occupation", value)}
                             >
-                              <SelectTrigger className="mt-2 border-2 border-slate-200 focus:border-green-500">
+                              <SelectTrigger className="mt-2 border-2 border-slate-200 focus:border-[#f59e0c]">
                                 <SelectValue placeholder="Select occupation" />
                               </SelectTrigger>
                               <SelectContent>
@@ -714,7 +728,7 @@ export default function Component() {
                               value={formData.workplaceSector}
                               onValueChange={(value) => handleInputChange("workplaceSector", value)}
                             >
-                              <SelectTrigger className="mt-2 border-2 border-slate-200 focus:border-green-500">
+                              <SelectTrigger className="mt-2 border-2 border-slate-200 focus:border-[#f59e0c]">
                                 <SelectValue placeholder="Select sector" />
                               </SelectTrigger>
                               <SelectContent>
@@ -738,7 +752,7 @@ export default function Component() {
                                   placeholder="Enter your specific workplace sector"
                                   value={formData.otherSector || ""}
                                   onChange={(e) => handleInputChange("otherSector", e.target.value)}
-                                  className="mt-2 border-2 border-slate-200 focus:border-green-500 transition-all duration-300"
+                                  className="mt-2 border-2 border-slate-200 focus:border-[#f59e0c] transition-all duration-300"
                                 />
                               </div>
                             )}
@@ -755,7 +769,7 @@ export default function Component() {
                               placeholder="e.g., Company Name or Organization"
                               value={formData.placeOfEmployment}
                               onChange={(e) => handleInputChange("placeOfEmployment", e.target.value)}
-                              className="mt-2 border-2 border-slate-200 focus:border-green-500 transition-all duration-300"
+                              className="mt-2 border-2 border-slate-200 focus:border-[#f59e0c] transition-all duration-300"
                             />
                           </div>
 
@@ -768,7 +782,7 @@ export default function Component() {
                               value={formData.salaryRange}
                               onValueChange={(value) => handleInputChange("salaryRange", value)}
                             >
-                              <SelectTrigger className="mt-2 border-2 border-slate-200 focus:border-green-500">
+                              <SelectTrigger className="mt-2 border-2 border-slate-200 focus:border-[#f59e0c]">
                                 <SelectValue placeholder="Select Salary Range" />
                               </SelectTrigger>
                               <SelectContent>
@@ -787,9 +801,9 @@ export default function Component() {
                     </Card>
 
                     <Card className="shadow-2xl border-0 bg-white/95 backdrop-blur-sm">
-                      <CardHeader className="bg-gradient-to-r from-green-600 to-green-500 text-white">
+                      <CardHeader className="bg-gradient-to-r from-[#f59e0c] to-[#f59e0c] text-white">
                         <CardTitle>Review Your Information</CardTitle>
-                        <CardDescription className="text-green-100">
+                        <CardDescription className="text-yellow-100">
                           Please review your details before submitting
                         </CardDescription>
                       </CardHeader>
@@ -797,40 +811,40 @@ export default function Component() {
                         <div className="space-y-3 text-sm">
                           <div className="flex justify-between">
                             <span className="text-slate-600">Name:</span>
-                            <span className="font-medium text-slate-800">{formData.fullName}</span>
+                            <span className="font-medium text-[#2b200c]">{formData.fullName}</span>
                           </div>
                           <div className="flex justify-between">
                             <span className="text-slate-600">Email:</span>
-                            <span className="font-medium text-slate-800">{formData.email}</span>
+                            <span className="font-medium text-[#2b200c]">{formData.email}</span>
                           </div>
                           <div className="flex justify-between">
                             <span className="text-slate-600">Phone:</span>
-                            <span className="font-medium text-slate-800">{formData.phoneNumber}</span>
+                            <span className="font-medium text-[#2b200c]">{formData.phoneNumber}</span>
                           </div>
                           <div className="flex justify-between">
                             <span className="text-slate-600">State:</span>
-                            <span className="font-medium text-slate-800">{formData.homeAddress}</span>
+                            <span className="font-medium text-[#2b200c]">{formData.homeAddress}</span>
                           </div>
                           <div className="flex justify-between">
                             <span className="text-slate-600">State:</span>
-                            <span className="font-medium text-slate-800">{formData.residenceState}</span>
+                            <span className="font-medium text-[#2b200c]">{formData.residenceState}</span>
                           </div>
                           <div className="flex justify-between">
                             <span className="text-slate-600">System:</span>
-                            <span className="font-medium text-slate-800">{selectedSystem?.label}</span>
+                            <span className="font-medium text-[#2b200c]">{selectedSystem?.label}</span>
                           </div>
                           <div className="flex justify-between">
                             <span className="text-slate-600">System Price:</span>
-                            <span className="font-medium text-slate-800">{formData.systemPrice}</span>
+                            <span className="font-medium text-[#2b200c]">{formData.systemPrice}</span>
                           </div>
 
                           <div className="flex justify-between">
                             <span className="text-slate-600">Payment:</span>
-                            <span className="font-medium text-slate-800">{formData.paymentPlan}</span>
+                            <span className="font-medium text-[#2b200c]">{formData.paymentPlan}</span>
                           </div>
                           <div className="flex justify-between">
                             <span className="text-slate-600">Workplace:</span>
-                            <span className="font-medium text-slate-800">
+                            <span className="font-medium text-[#2b200c]">
                               {formData.workplaceSector === "Other - please specify"
                                 ? formData.otherSector || "Other"
                                 : formData.workplaceSector}
@@ -838,11 +852,11 @@ export default function Component() {
                           </div>
                           <div className="flex justify-between">
                             <span className="text-slate-600">Place of Work:</span>
-                            <span className="font-medium text-slate-800">{formData.placeOfEmployment || "Not specified"}</span>
+                            <span className="font-medium text-[#2b200c]">{formData.placeOfEmployment || "Not specified"}</span>
                           </div>
                           <div className="flex justify-between">
                             <span className="text-slate-600">Salary Range:</span>
-                            <span className="font-medium text-slate-800">{formData.salaryRange || "Not specified"}</span>
+                            <span className="font-medium text-[#2b200c]">{formData.salaryRange || "Not specified"}</span>
                           </div>
                         </div>
 
@@ -850,7 +864,7 @@ export default function Component() {
                           <Button
                             onClick={handleSubmit}
                             disabled={formSubmission.isPending}
-                            className="w-full bg-gradient-to-r from-slate-800 to-green-500 hover:from-slate-900 hover:to-green-600 text-white font-semibold py-3 rounded-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                            className="w-full bg-gradient-to-r from-[#2b200c] to-[#f59e0c] hover:from-slate-900 hover:to-[#f59e0c] text-white font-semibold py-3 rounded-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                           >
                             {formSubmission.isPending ? (
                               <>
@@ -887,7 +901,7 @@ export default function Component() {
                   <Button
                     onClick={handleNext}
                     disabled={!canProceed()}
-                    className="flex items-center gap-2 bg-gradient-to-r from-slate-800 to-green-500 hover:from-slate-900 hover:to-green-600"
+                    className="flex items-center gap-2 bg-gradient-to-r from-[#2b200c] to-[#f59e0c] hover:from-slate-900 hover:to-[#f59e0c]"
                   >
                     Next
                     <ArrowRight className="h-4 w-4" />
@@ -903,16 +917,16 @@ export default function Component() {
               <div className="text-center space-y-8 max-w-2xl mx-auto">
                 {/* Success Animation */}
                 <div className="relative">
-                  <div className="w-32 h-32 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-8 animate-pulse">
+                  <div className="w-32 h-32 bg-gradient-to-r from-[#f59e0c] to-[#f59e0c] rounded-full flex items-center justify-center mx-auto mb-8 animate-pulse">
                     <CheckCircle className="h-16 w-16 text-white animate-bounce" />
                   </div>
-                  <div className="absolute inset-0 w-32 h-32 bg-green-500 rounded-full mx-auto animate-ping opacity-20"></div>
+                  <div className="absolute inset-0 w-32 h-32 bg-[#f59e0c] rounded-full mx-auto animate-ping opacity-20"></div>
                 </div>
 
                 {/* Success Message */}
                 <div className="space-y-4">
-                  <h1 className="text-4xl md:text-5xl font-bold text-slate-800">Thank You!</h1>
-                  <p className="text-xl text-green-600 font-semibold">
+                  <h1 className="text-4xl md:text-5xl font-bold text-[#2b200c]">Thank You!</h1>
+                  <p className="text-xl text-[#f59e0c] font-semibold">
                     Your interest form has been successfully submitted
                   </p>
                   <p className="text-lg text-slate-600 max-w-xl mx-auto">
@@ -924,7 +938,7 @@ export default function Component() {
                 {/* Next Steps */}
                 <Card className="bg-white/80 backdrop-blur-sm border-0 shadow-xl">
                   <CardContent className="p-8">
-                    <h3 className="text-xl font-semibold mb-6 text-slate-800">What happens next?</h3>
+                    <h3 className="text-xl font-semibold mb-6 text-[#2b200c]">What happens next?</h3>
                     <div className="space-y-4">
                       {[
                         {
@@ -943,13 +957,13 @@ export default function Component() {
                         { step: 4, title: "Custom Proposal", desc: "Receive your tailored solution", time: "5-7 days" },
                       ].map((item) => (
                         <div key={item.step} className="flex items-start gap-4 p-4 bg-slate-50 rounded-lg">
-                          <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                          <div className="w-8 h-8 bg-gradient-to-r from-[#f59e0c] to-[#f59e0c] rounded-full flex items-center justify-center flex-shrink-0">
                             <span className="text-white font-semibold text-sm">{item.step}</span>
                           </div>
                           <div className="flex-1">
                             <div className="flex justify-between items-start">
                               <div>
-                                <h4 className="font-medium text-slate-800">{item.title}</h4>
+                                <h4 className="font-medium text-[#2b200c]">{item.title}</h4>
                                 <p className="text-sm text-slate-600">{item.desc}</p>
                               </div>
                               <Badge variant="outline" className="text-xs">
@@ -968,11 +982,11 @@ export default function Component() {
                   <p className="text-slate-600 mb-4">Have questions? Our team is here to help!</p>
                   <div className="flex justify-center items-center gap-6 text-sm text-slate-500">
                     <div className="flex items-center gap-2">
-                      <Phone className="h-4 w-4 text-green-500" />
+                      <Phone className="h-4 w-4 text-[#f59e0c]" />
                       <span>+234 8170001441</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Mail className="h-4 w-4 text-green-500" />
+                      <Mail className="h-4 w-4 text-[#f59e0c]" />
                       <span>hello@kairoshofenergy.com</span>
                     </div>
                   </div>
@@ -985,9 +999,9 @@ export default function Component() {
 
       {/* Footer - Only show on intro and completion */}
       {(currentStep === 0 || currentStep === 5) && (
-        <footer className="bg-slate-900 text-white py-8 mt-12 relative z-10">
+        <footer className="bg-[#f59e0c] text-white py-8 mt-12 relative z-10">
           <div className="container mx-auto px-4 text-center">
-            <p className="text-slate-400">© 2025 Kairos Hof Energy Ltd. Powering Nigeria's sustainable future.</p>
+            <p className="text-black">© 2025 Kairos Hof Energy Ltd. Powering Nigeria's sustainable future.</p>
           </div>
         </footer>
       )}
