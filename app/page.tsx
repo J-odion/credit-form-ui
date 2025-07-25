@@ -38,7 +38,7 @@ import {
   Award,
   AlertCircle,
 } from "lucide-react"
-import { nigerianStates, systemCapacities, occupations, workplaceSectors, paymentPlans } from "@/lib/data"
+import { nigerianStates, systemCapacities, occupations, workplaceSectors, paymentPlans, salaryRanges } from "@/lib/data"
 
 export default function Component() {
   const [currentStep, setCurrentStep] = useState(0) // Start at 0 for introduction
@@ -457,7 +457,7 @@ export default function Component() {
                       </CardContent>
                     </Card>
 
-                    <div className="space-y-6">
+                    <div className=" hidden md:block space-y-6">
                       <Card className="shadow-xl border-0 bg-white/95 backdrop-blur-sm">
                         <CardContent className="p-6">
                           <div className="text-center space-y-4">
@@ -544,7 +544,7 @@ export default function Component() {
                       </CardContent>
                     </Card>
 
-                    <div className="space-y-6">
+                    <div className="hidden md:block space-y-6">
                       <Card className="shadow-xl border-0 bg-white/95 backdrop-blur-sm">
                         <CardContent className="p-6">
                           <h3 className="text-xl font-semibold mb-4 text-center text-slate-800">
@@ -768,30 +768,24 @@ export default function Component() {
                               <Calculator className="h-4 w-4" />
                               Salary Range
                             </Label>
-                            <Input
-                              id="salaryRange"
-                              type="text"
-                              placeholder="e.g., ₦500,000 - ₦5,000,000"
+                            <Select
                               value={formData.salaryRange}
-                              onChange={(e) => handleInputChange("salaryRange", e.target.value)}
-                              className="mt-2 border-2 border-slate-200 focus:border-green-500"
-                            />
+                              onValueChange={(value) => handleInputChange("salaryRange", value)}
+                            >
+                              <SelectTrigger className="mt-2 border-2 border-slate-200 focus:border-green-500">
+                                <SelectValue placeholder="Select Salary Range" />
+                              </SelectTrigger>
+                              <SelectContent>
+                                {salaryRanges.map((range) => (
+                                  <SelectItem key={range.label} value={range.value}>
+                                    {range.value}
+                                  </SelectItem>
+                                ))}
+                              </SelectContent>
+                            </Select>
                           </div>
 
-                          <div>
-                            <Label htmlFor="estimatedBudget" className="text-sm font-medium flex items-center gap-2">
-                              <Calculator className="h-4 w-4" />
-                              Estimated Budget
-                            </Label>
-                            <Input
-                              id="estimatedBudget"
-                              type="text"
-                              placeholder="e.g., ₦500,000 - ₦5,000,000"
-                              value={formData.estimatedBudget}
-                              onChange={(e) => handleInputChange("estimatedBudget", e.target.value)}
-                              className="mt-2 border-2 border-slate-200 focus:border-green-500"
-                            />
-                          </div>
+                          
                         </div>
                       </CardContent>
                     </Card>
@@ -819,6 +813,10 @@ export default function Component() {
                           </div>
                           <div className="flex justify-between">
                             <span className="text-slate-600">State:</span>
+                            <span className="font-medium text-slate-800">{formData.homeAddress}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-slate-600">State:</span>
                             <span className="font-medium text-slate-800">{formData.residenceState}</span>
                           </div>
                           <div className="flex justify-between">
@@ -829,10 +827,7 @@ export default function Component() {
                             <span className="text-slate-600">System Price:</span>
                             <span className="font-medium text-slate-800">{formData.systemPrice}</span>
                           </div>
-                          <div className="flex justify-between">
-                            <span className="text-slate-600">Estimated Budget:</span>
-                            <span className="font-medium text-slate-800">{formData.estimatedBudget}</span>
-                          </div>
+                          
                           <div className="flex justify-between">
                             <span className="text-slate-600">Payment:</span>
                             <span className="font-medium text-slate-800">{formData.paymentPlan}</span>
