@@ -57,7 +57,7 @@ export default function Component() {
     salaryRange: "",
     placeOfEmployment: "",
     systemPrice: "",
-    provider: "kairos",
+    provider: "kairoshofenergy",
   })
   const [selectedSystem, setSelectedSystem] = useState<any>(null)
   const [isAnimating, setIsAnimating] = useState(false)
@@ -152,11 +152,11 @@ export default function Component() {
       salaryRange: formData.salaryRange?.trim() || undefined,
       placeOfEmployment: formData.placeOfEmployment?.trim() || undefined,
       systemPrice: formData.systemPrice,
-      provider: "kairosenergy",
+      provider: "kairoshofenergy",
     }
 
     // Log the data being sent for debugging
-    console.log("📤 Submitting form data:", submissionData)
+    console.log("Submitting form data:", submissionData)
 
     // Submit form using React Query mutation
     formSubmission.mutate(submissionData)
@@ -912,7 +912,7 @@ export default function Component() {
                 {/* Success Message */}
                 <div className="space-y-4">
                   <h1 className="text-4xl md:text-5xl font-bold text-white">Thank You!</h1>
-                  <p className="text-xl text-green-600 font-semibold">
+                  <p className="text-xl bg-black/60 text-green-600 font-semibold">
                     Your interest form has been successfully submitted
                   </p>
                   <p className="text-lg text-white max-w-xl mx-auto">
@@ -949,8 +949,8 @@ export default function Component() {
                           <div className="flex-1">
                             <div className="flex justify-between items-start">
                               <div>
-                                <h4 className="font-medium text-slate-200">{item.title}</h4>
-                                <p className="text-sm text-slate-300">{item.desc}</p>
+                                <h4 className="font-medium text-black">{item.title}</h4>
+                                <p className="text-sm text-black">{item.desc}</p>
                               </div>
                               <Badge variant="outline" className="text-xs">
                                 {item.time}
