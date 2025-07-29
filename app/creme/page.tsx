@@ -963,8 +963,8 @@ export default function Component() {
                           <div className="flex-1">
                             <div className="flex justify-between items-start">
                               <div>
-                                <h4 className="font-medium text-[#2b200c]">{item.title}</h4>
-                                <p className="text-sm text-slate-600">{item.desc}</p>
+                                <h4 className="font-medium text-black">{item.title}</h4>
+                                <p className="text-sm text-black">{item.desc}</p>
                               </div>
                               <Badge variant="outline" className="text-xs">
                                 {item.time}
