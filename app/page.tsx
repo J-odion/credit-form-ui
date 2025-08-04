@@ -939,7 +939,7 @@ export default function Component() {
                           desc: "Schedule your free consultation call",
                           time: "1-2 days",
                         },
-                        { step: 3, title: "Site Assessment", desc: "Free on-site energy audit", time: "3-5 days" },
+                        { step: 3, title: "Site Assessment", desc: "On-site energy audit - (optional terms and conditions applied)", time: "3-5 days" },
                         { step: 4, title: "Custom Proposal", desc: "Receive your tailored solution", time: "5-7 days" },
                       ].map((item) => (
                         <div key={item.step} className="flex items-start gap-4 p-4 bg-slate-50 rounded-lg">
