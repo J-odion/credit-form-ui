@@ -59,7 +59,7 @@ export const systemCapacities = [
   },
     {
     value: "1000w/kwh power station",
-    label: "100W Power Station",
+    label: "1000W Power Station",
     price: "₦800,000 - ₦850,000",
     description: "Perfect for small devices and emergency backup",
     icon: Battery,
