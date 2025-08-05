@@ -672,6 +672,7 @@ export default function Component() {
                                   <selectedSystem.icon className="h-6 w-6 text-[#f59e0c]" />
                                   <span className="font-medium text-[#2b200c]">{selectedSystem.label}</span>
                                 </div>
+                                <p className="text-xs">Included: <span className="font-medium text-slate-800 text-sm">{selectedSystem.included}</span></p>
                                 <p className="text-slate-600 mb-3">{selectedSystem.description}</p>
                                 <div className="text-lg font-semibold text-[#f59e0c]">{selectedSystem.price}</div>
                               </div>
