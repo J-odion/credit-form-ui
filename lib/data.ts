@@ -108,7 +108,7 @@ export const systemCapacities = [
     label: "4KVA/48V Inverter System",
     price: "₦4,308,000",
     description: "Great for medium-sized homes",
-    included: "12V 200Ah Tubbular Battery 4pcs| Charge Controller 60A | Solar Panel 550W 8pcs",
+    included: "12V 200Ah Tubbular Battery 4pcs| Charge Controller 100A | Solar Panel 550W 8pcs",
     icon: Zap,
     features: ["Multiple rooms", "AC (small)", "Washing machine", "All lighting"],
   },
