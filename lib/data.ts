@@ -52,7 +52,7 @@ export const systemCapacities = [
   {
     value: "200w/kwh power station",
     label: "200W Power Station",
-    price: "₦350,000",
+    price: "₦342,000",
     description: "Perfect for small devices and emergency backup",
     included: "1KWh Lithium Battery | 200w solar panel",
     icon: Battery,
@@ -97,7 +97,7 @@ export const systemCapacities = [
   {
     value: "3.5kva/24V inverter",
     label: "3.5KVA Inverter System",
-    price: "₦4,092,000",
+    price: "₦3,756,000",
     description: "Great for medium-sized homes",
     included: "12V 200Ah Tubbular Battery 4pcs| Charge Controller 100A | Solar Panel 550W 8pcs",
     icon: Zap,
@@ -106,7 +106,7 @@ export const systemCapacities = [
   {
     value: "4kva inverter",
     label: "4KVA/48V Inverter System",
-    price: "₦4,308,000",
+    price: "₦3,972,000",
     description: "Great for medium-sized homes",
     included: "12V 200Ah Tubbular Battery 4pcs| Charge Controller 100A | Solar Panel 550W 8pcs",
     icon: Zap,
@@ -124,7 +124,7 @@ export const systemCapacities = [
   {
     value: "10kva inverter",
     label: "10KVA Inverter System",
-    price: "₦7,855,594.56",
+    price: "₦10,726,516.00",
     description: "Commercial grade for businesses",
     included: "10KWH Lithium Ion Battery | Solar Panel 550W 12pcs",
     icon: Briefcase,
@@ -133,7 +133,7 @@ export const systemCapacities = [
    {
     value: "12kva inverter",
     label: "12KVA Inverter System",
-    price: "₦12,752,700",
+    price: "₦10,726,675.20",
     description: "Commercial grade for businesses",
     included: "15KWH Lithium Ion Battery | Solar Panel 550W 20pcs",
     icon: Briefcase,
@@ -142,7 +142,7 @@ export const systemCapacities = [
   {
     value: "15kva inverter",
     label: "15KVA Inverter System",
-    price: "₦14,295,908.16",
+    price: "₦13,862,516.16",
     description: "Commercial grade for businesses",
     included: "20KWH Lithium Ion Battery | Solar Panel 550W 20pcs",
     icon: Briefcase,
@@ -151,7 +151,7 @@ export const systemCapacities = [
   {
     value: "20kva inverter",
     label: "20KVA Inverter System",
-    price: "₦24,065,486",
+    price: "₦23,231,638.80",
     description: "Large commercial applications",
     included: "40KWH Lithium Ion Battery | Solar Panel 550W 40pcs",
     icon: Shield,
@@ -160,7 +160,7 @@ export const systemCapacities = [
   {
     value: "30kva inverter",
     label: "30KVA Inverter System",
-    price: "₦27,635,095",
+    price: "₦26,777,800.32",
     description: "Large commercial applications",
     included: "40KWH Lithium Ion Battery | Solar Panel 550W 40pcs",
     icon: Shield,
@@ -169,7 +169,7 @@ export const systemCapacities = [
   {
     value: "50kva inverter",
     label: "50KVA Inverter System",
-    price: "₦39,957,676",
+    price: "₦38,668,091.04",
     description: "Industrial scale solutions",
     included: "60KWH Lithium Ion Battery | Solar Panel 550W 60pcs",
     icon: Leaf,
